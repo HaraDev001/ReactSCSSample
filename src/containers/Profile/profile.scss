@@ -1,0 +1,490 @@
+&.profile-page{
+	padding-left: 285px;
+	padding-right: 66px;
+	.still-loading{
+		position: fixed;
+	}
+
+	& ~ span.blur-bg{
+		-webkit-backdrop-filter: blur(3px);
+		backdrop-filter: blur(3px);
+	}
+
+	h2.section-label{
+		cursor: pointer;
+		@include font(33px);
+		@include letter-spacing(35.71);
+		line-height: 38px;
+		margin-bottom: 25px;
+
+		svg{
+			vertical-align: middle;
+			transform: rotate(-180deg);
+			transition: transform 0.2s ease-in-out;
+		}
+		&.opened{
+			svg{
+				transform: rotate(0);
+			}
+		}
+	}
+
+	p.unit-label{
+		display: block;
+		@include font(16px, 800);
+		line-height: 19px;
+		color: #000;
+	}
+
+	.page-label{
+		position: absolute;
+		top: -50px;
+		pointer-events: none;
+		p{
+			margin-bottom: 4px;
+		}
+	}
+
+	.justifyEnd{
+		display: flex;
+		justify-content: flex-end;
+	}
+	.justifyCenter{
+		 display: flex;
+		 justify-content: center;
+		 align-items: center;
+	 }
+	.justifyBetween{
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+	}
+	.columnDirection{
+		display: flex;
+		flex-direction: column;
+	}
+
+	.row-widget{
+		margin: 0 -25px;
+		display: flex;
+		.col-widget{
+			padding: 0 25px;
+			&.small{
+				width: calc(100% / 3);
+				&.widder .widget{
+					padding: 40px 44px 40px 42px;
+				}
+			}
+			&.medium{
+				width: calc((2 / 3) * 100%);
+				margin-bottom: 0;
+			}
+		}
+	}
+
+	.widget{
+		cursor: pointer;
+		padding: 40px 24px 40px 22px;
+		min-height: 137px;
+		margin-bottom: 50px;
+		border-radius: 5px;
+		background-color: $blue_lighten;
+		transition: background-color 0.2s ease-in-out;
+		.icon{
+			width: 62px;
+			height: 62px;
+			border-radius: 100%;
+			background-color: #000;
+			@extend %justify-center;
+		}
+		p, h4{
+			color: #000;
+		}
+		svg{
+			path{
+				transition: fill 0.2s ease-in-out;
+			}
+		}
+		.views{
+			margin-left: 40px;
+			p{
+				margin-bottom: 13px;
+			}
+			h4{
+				@include font(23px);
+				@include letter-spacing(10);
+				line-height: 27px;
+			}
+		}
+		.toggle-container{
+			margin-bottom: 25px;
+			.toggle-btn{
+				display: flex;
+				align-items: center;
+				justify-content: flex-end;
+				@include font(12px, 800);
+				@include letter-spacing(10);
+				line-height: 16px;
+				color: #000;
+				transition: color 0.2s ease-in-out;
+				.toggle{
+					cursor: pointer;
+					margin-left: 10px;
+					//display: flex;
+					//align-items: center;
+					width: 28px;
+					height: 16px;
+					border-radius: 8px;
+					background-color: $orange;
+					&.active{
+						background-color: #fff;
+						span{
+							transform: translateX(13px) translateY(1px);
+							background-color: $orange;
+						}
+					}
+					span{
+						display: block;
+						width: 14px;
+						height: 14px;
+						background-color: #fff;
+						border-radius: 100%;
+						transform: translateX(1px) translateY(1px);
+						transition: transform 0.2s ease-in-out;
+					}
+				}
+			}
+		}
+
+		.graph-chart{
+			@extend %graph-chart;
+		}
+
+		&.transparent{
+			background-color: transparent;
+		}
+		&.chart-widget{
+			padding: 0;
+			.widget-collapse{
+				height: 485px;
+			}
+		}
+		&.black, &.orange, &.active{
+			p, h4{
+				color: #fff;
+			}
+		}
+		&.black{
+			background-color: #000;
+			.icon{
+				background-color: $orange;
+			}
+		}
+		&.orange, &.active{
+			background-color: $orange;
+			.icon{
+				background-color: #fff;
+			}
+		}
+		&.active{
+			svg{
+				path{
+					fill: #fff;
+					&[opacity]{
+						opacity: 0.3;
+					}
+				}
+			}
+			.toggle-container{
+				.toggle-btn{
+					color: #fff;
+				}
+			}
+		}
+	}
+
+	.restaurant-menu-list{
+		display: flex;
+		margin: 0 -10px;
+		.category-list, .dishes-list {
+			margin: 0 10px;
+			background-color: $blue_lighten;
+			padding: 25px 21px 14px 21px;
+			border-radius: 5px;
+
+			.list{
+				margin: 0 -22px 40px;
+				padding: 0 22px;
+				min-height: 550px;
+				overflow-y: auto;
+				&-item{
+					cursor: pointer;
+					position: relative;
+					padding: 14px 15px;
+					margin-bottom: 22px;
+					text-align: center;
+					background-color: #fff;
+					border: 4px solid #fff;
+					border-radius: 5px;
+
+					transition: border-color 0.2s ease-in-out;
+					&:last-of-type{
+						margin-bottom: 0;
+					}
+					span.label{
+						@include font(15px, 800);
+						line-height: 18px;
+					}
+					button{
+						position: absolute;
+						&.settings{
+							display: flex;
+							align-items: center;
+							right: 10px;
+							top: 0;
+							bottom: 0;
+							margin: auto;
+						}
+						&.btn--delete{
+							right: 15px;
+							z-index: 2;
+							opacity: 0;
+							pointer-events: none;
+							top: calc(100% + 4px);
+							transform: translateY(15px);
+							transition: transform 0.2s ease-in-out, opacity 0.2s ease-in-out;
+						}
+					}
+
+					&.selected{
+						border-color: #000;
+						&.to-delete{
+							z-index: 10;
+							button.btn--delete{
+								opacity: 1;
+								z-index: 11;
+								pointer-events: auto;
+								transform: translateY(5px);
+							}
+						}
+					}
+				}
+			}
+		}
+		.category-list{
+			width: 31.3%;
+		}
+		.dishes-list{
+			width: 65.7%;
+			padding-left: 33px;
+			padding-right: 33px;
+		}
+	}
+
+	section{
+		&.dashboard-section{
+			padding-top: 50px;
+		}
+		&.menu-section, &.statistics-section{
+			padding-top: 55px;
+			padding-bottom: 70px;
+		}
+
+		@import "./Settings/settings";
+	}
+
+	@include breakpoint(tbmax){
+		.row-widget{
+			flex-wrap: wrap;
+			.col-widget{
+				&.small.widder{
+					order: 1;
+					width: 100%;
+				}
+				&.medium{
+					width: 100%;
+					order: 2;
+				}
+			}
+		}
+
+		.widget{
+			padding: 20px;
+			min-height: 120px;
+			.views {
+				margin-left: 15px;
+			}
+			.icon{
+				width: 42px;
+				height: 42px;
+			}
+			p.unit-label{
+				font-size: 12px;
+				line-height: 17px;
+				margin-bottom: 5px;
+			}
+			h4{
+				font-size: 19px;
+			}
+		}
+
+		.restaurant-menu-list{
+			.category-list{
+				width: 41.3%;
+			}
+			.dishes-list{
+				width: 55.7%;
+				padding: 25px 21px 14px 21px;
+			}
+		}
+	}
+
+	@include breakpoint(smmax){
+		padding: 0 40px 0 80px;
+		.page-label {
+			margin-top: 50px;
+			position: relative;
+			top: 0;
+		}
+		.row-widget{
+			flex-wrap: wrap;
+			.col-widget{
+				&.small{
+					width: 100%;
+				}
+				&.medium{
+					width: 100%;
+				}
+			}
+		}
+		.widget{
+			&.chart-widget{
+				position: relative;
+				left: 30px;
+				width: calc(100% - 30px);
+			}
+			.graph-chart{
+				.apexcharts-canvas{
+					text {
+						font-size: 16px;
+						line-height: 22px;
+					}
+					.apexcharts-yaxis{
+						text{
+							transform: translateX(-2px);
+						}
+					}
+				}
+			}
+		}
+
+		.restaurant-menu-list{
+			flex-wrap: wrap;
+			.category-list, .dishes-list{
+				width: 100%;
+				.list{
+					min-height: 150px;
+					margin-bottom: 20px;
+				}
+			}
+			.category-list{
+				.list{
+					z-index: 12;
+					overflow-y: initial;
+				}
+			}
+			.dishes-list{
+				width: 100%;
+				margin-top: 40px;
+			}
+		}
+
+		section{
+			&.menu-section, &.statistics-section{
+				padding-top: 25px;
+			}
+		}
+	}
+
+	@include breakpoint(xs){
+		padding: 0 15px 0 70px;
+		h2.section-label{
+			font-size: 20px;
+			margin-bottom: 0;
+		}
+		.page-label{
+			p{
+				font-size: 15px;
+			}
+		}
+		.filters{
+			flex-wrap: wrap;
+			margin-bottom: 20px;
+			button.sort-button{
+				margin: 0 10px 20px 0;
+				width: 180px;
+				svg{
+					margin-left: 20px;
+				}
+			}
+		}
+
+		.row-widget{
+			.col-widget{
+				&.small.widder{
+					.widget{
+						padding: 30px 24px 30px 32px;
+					}
+				}
+			}
+		}
+
+		.widget{
+			margin-bottom: 20px;
+			padding: 30px 24px 30px 32px;
+			min-height: 100px;
+			.views{
+				margin-left: 25px;
+			}
+			&.chart-widget{
+				padding: 0;
+				margin-bottom: 40px;
+				.widget-collapse{
+					height: 300px;
+				}
+			}
+		}
+
+		.restaurant-menu-list{
+			flex-wrap: wrap;
+			.category-list, .dishes-list{
+				width: 100%;
+				padding: 15px 10px 15px;
+				.list{
+					min-height: 150px;
+					margin-bottom: 20px;
+					&-item {
+						border-width: 3px;
+						span.label{
+							font-size: 13px;
+						}
+					}
+				}
+			}
+		}
+
+		section{
+			&.dashboard-section{
+				padding-top: 25px;
+				padding-bottom: 20px;
+				.filters{
+					justify-content: flex-start;
+					.profile-dropdown{
+						left: 0;
+						right: auto;
+					}
+				}
+			}
+		}
+	}
+}

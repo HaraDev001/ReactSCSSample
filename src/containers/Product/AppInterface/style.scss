@@ -1,0 +1,56 @@
+&.app-interface-section{
+	padding: 92px 0 194px;
+
+	svg{
+		display: block;
+		margin: auto;
+		position: relative;
+		z-index: 2;
+	}
+
+	img{
+		&.screen-shot {
+			position: relative;
+			z-index: 2;
+			margin: 0 auto 90px;
+			display: block;
+			max-width: 540px;
+		}
+		&.decoration{
+			position: absolute;
+			z-index: 0;
+			&--1{
+				right: -236px;
+				top: -301px;
+			}
+			&--2{
+				left: -150px;
+				top: -300px;
+			}
+		}
+	}
+
+	.section-title{
+		margin-top: 108px;
+	}
+
+
+	@include breakpoint(smmax){
+		img{
+			&.decoration{
+				opacity: 0.7;
+			}
+		}
+	}
+
+	@include breakpoint(xs){
+		img{
+			&.screen-shot{
+				max-width: 100%;
+			}
+			&.decoration{
+				opacity: 0.7;
+			}
+		}
+	}
+}

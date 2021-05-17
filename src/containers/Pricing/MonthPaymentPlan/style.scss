@@ -1,0 +1,85 @@
+&.month-plan-section{
+	padding: 76px 0 108px;
+
+	.toggle{
+		margin-bottom: 70px;
+	}
+
+	.decoration{
+		position: absolute;
+		pointer-events: none;
+		z-index: -1;
+		&--circle{
+			left: 335px;
+			bottom: 0;
+		}
+		&--left{
+			left: 30px;
+			top: -219px;
+		}
+		&--right{
+			top: -294px;
+			right: -64px;
+		}
+	}
+
+	svg.dots-delimiters{
+		display: block;
+		margin: 56px auto 0;
+	}
+
+	.toggle-container{
+		@extend %justify-center;
+		margin-bottom: 70px;
+		span{
+			@include font(16px, 800);
+			line-height: 19px;
+		}
+		.toggle{
+			cursor: pointer;
+			margin: 0 12px;
+			padding: 5px;
+			width: 72px;
+			border: 4px solid #000;
+			border-radius: 20px;
+			&.annual{
+				span{
+					transform: translateX(27px);
+				}
+			}
+			span{
+				box-shadow: 0 2px 4px rgba(#000000, 0.2);
+				display: block;
+				width: 26px;
+				height: 26px;
+				background-color: $orange;
+				border-radius: 100%;
+				transition: transform 0.2s ease-in-out;
+			}
+		}
+	}
+
+	@include breakpoint(mdmax){
+		.payment-plans{
+			align-items: center;
+			&--item{
+				margin-bottom: 50px;
+				&:last-of-type{
+					margin-bottom: 0;
+				}
+			}
+		}
+	}
+	@include breakpoint(xs){
+		.payment-plans{
+			align-items: center;
+			&--item{
+				margin-right: 0;
+				margin-left: 0;
+				&:last-of-type{
+					margin-bottom: 0;
+				}
+			}
+		}
+	}
+}

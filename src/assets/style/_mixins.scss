@@ -1,0 +1,120 @@
+@mixin font($size, $weight: normal, $family: 'Gilroy') {
+	font-size: $size;
+	font-family: $family , sans-serif;
+	font-weight: $weight;
+}
+
+// calculate letter-spacing
+@function tracking( $target ){
+	@return ($target / 1000) * 1em;
+}
+
+@mixin letter-spacing( $target ){
+	letter-spacing: tracking( $target );
+}
+
+$config: (
+	media-breakpoints: (
+		xl: (
+			min: 1926px
+		),
+		lg: (
+			min: 1370px,
+			max: 1925px,
+		),
+		lgmin: (
+			min:1370px,
+		),
+		lgmax: (
+			max:1925px,
+		),
+
+		md: (
+			min: 1270px,
+			max: 1369px,
+		),
+		mdmin: (
+			min:1270px,
+		),
+		mdmax: (
+			max:1369px,
+		),
+		tb: (
+			min: 1024px,
+			max: 1269px,
+		),
+		tbmin: (
+			min:1024px,
+		),
+		tbmax: (
+			max:1269px,
+		),
+		sm: (
+			min: 600px,
+			max: 1023px,
+		),
+		smmin: (
+			min:600px,
+		),
+		smmax: (
+			max:1023px,
+		),
+		xs: (
+			max: 599px
+		),
+		ts: (
+			min: 600px,
+			max: 767px
+		),
+		tsmax: (
+			max: 767px
+		),
+		mobile: (
+			min: 320px,
+			max: 480px,
+		),
+		watch: (
+			max : 50mm
+		),
+	),
+);
+
+@mixin breakpoint($name, $orientation: false, $breakpoints: map_get($config, media-breakpoints)) {
+	@if (map_has_key($breakpoints, $name)) {
+
+		$breakpoint: map_get($breakpoints, $name);
+		@if (map_has_key($breakpoint, min)) {
+			@if (map_has_key($breakpoint, max)) {
+				@if ($orientation != false) {
+					@media (min-width: #{map_get($breakpoint,min)}) and (max-width: #{map_get($breakpoint,max)}) and (orientation: $orientation) {
+						@content;
+					}
+				} @else {
+					@media (min-width: #{map_get($breakpoint,min)}) and (max-width: #{map_get($breakpoint,max)}) {
+						@content;
+					}
+				}
+			} @else {
+				@if ($orientation != false) {
+					@media (min-width: #{map_get($breakpoint,min)}) and (orientation: $orientation) {
+						@content;
+					}
+				} @else {
+					@media (min-width: #{map_get($breakpoint,min)}) {
+						@content;
+					}
+				}
+			}
+		} @else if (map_has_key($breakpoint, max)) {
+			@if ($orientation != false) {
+				@media (max-width: #{map_get($breakpoint,max)}) and (orientation: $orientation) {
+					@content;
+				}
+			} @else {
+				@media (max-width: #{map_get($breakpoint,max)}) {
+					@content;
+				}
+			}
+		}
+	}
+}

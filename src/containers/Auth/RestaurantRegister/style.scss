@@ -1,0 +1,305 @@
+&.restaurant-register-section{
+	padding: 67px 0;
+	min-height: 100vh;
+	@extend %justify-center;
+	.white-bg{
+		position: absolute;
+		display: block;
+		width: 40%;
+		height: 40%;
+		top: 0;
+		bottom: 0;
+		left: 0;
+		right: 0;
+		margin: auto;
+		background-color: #fff;
+		border-radius: 5px;
+		box-shadow: 0 3px 26px rgba(#000000, 0.1);
+		z-index: -1;
+		transition: 0.2s;
+		&.widder{
+			animation: widder 0.2s;
+			animation-direction: alternate;
+			animation-iteration-count: 1;
+			animation-fill-mode: forwards;
+			@keyframes widder {
+				0% {
+					width: 40%;
+					height: 40%;
+				}
+				100% {
+					width: 100%;
+					height: 100%;
+				}
+			}
+		}
+	}
+	.register-container{
+		position: relative;
+		display: flex;
+		flex-direction: row;
+		margin-bottom: 68px;
+		width: 100%;
+		min-height: 700px;
+		padding: 46px 46px 67px 69px;
+		.profile-menu{
+			width: 24.1%;
+			min-height: 40vh;
+			.logo{
+				display: flex;
+				flex: 2;
+			}
+		}
+
+		.section-title{
+			text-align: left;
+			margin-bottom: 32px;
+		}
+
+		.form-container{
+			width: 66.2%;
+			padding: 0;
+			align-items: center;
+		}
+
+		p.select-languages{
+			position: absolute;
+			margin-top: 18px;
+			padding: 0 77px 0 54px;
+		}
+
+		form{
+			margin-bottom: 22px;
+			margin-top: 60px;
+			fieldset{
+				margin: 0;
+				.field{
+					input{
+						text-align: left;
+						text-align-last: left;
+						padding-left: 54px;
+					}
+				}
+				button{
+					&.btn--getStarted{
+						max-width: 310px;
+						margin-top: 98px;
+						margin-left: auto;
+						margin-right: 0;
+					}
+					&.create-restaurant{
+						max-width: 490px;
+					}
+				}
+			}
+		}
+
+		.advantages{
+			justify-content: flex-start;
+			&--item{
+				margin-bottom: 0;
+				&:first-of-type{
+					margin-left: 0;
+				}
+			}
+		}
+
+		.payment-plans{
+			justify-content: flex-start;
+			align-items: initial;
+			margin-top: 29px;
+			&--item{
+				cursor: pointer;
+				max-width: 260px;
+				padding: 40px 29px 20px 29px;
+				box-shadow: none;
+				margin-left: 0;
+				margin-right: 40px;
+				transition: box-shadow 0.2s ease-in-out;
+				.month-price{
+					font-size: 13px;
+					line-height: 15px;
+					margin-bottom: 17px;
+					span{
+						font-size: 32px;
+						line-height: 40px;
+						transition: font-weight 0.2s ease-in-out, color 0.2s ease-in-out;
+					}
+				}
+				.type{
+					font-size: 24px;
+					margin-bottom: 0;
+				}
+				hr{
+					margin-top: 28px;
+					margin-bottom: 26px;
+				}
+				ul {
+					li{
+						font-size: 12px;
+						line-height: 14px;
+						margin-bottom: 19px;
+					}
+				}
+				.btn{
+					&--getPlan{
+						height: 49px;
+						line-height: 46px;
+						font-size: 14px;
+					}
+				}
+
+				&:hover, &.selected{
+					box-shadow: 0 20px 40px rgba(3, 0, 77, 0.04);
+					.month-price{
+						span{
+							font-weight: 800;
+							color: $bluesky;
+						}
+					}
+					.btn{
+						font-weight: 800;
+						background-color: $bluesky;
+						border-color: $bluesky;
+					}
+				}
+			}
+
+		}
+	}
+
+	@include breakpoint(tbmax){
+		.register-container{
+			padding: 46px 46px 67px;
+			.form-container{
+				padding-left: 30px;
+			}
+		}
+	}
+
+	@include breakpoint(smmax){
+		.register-container{
+			padding: 46px 46px 67px;
+			flex-wrap: wrap;
+			flex-direction: column;
+
+			.form-container{
+				padding-left: 0;
+				width: 100%;
+				flex: none;
+				form {
+					fieldset {
+						.field input{
+							padding-left: 35px;
+						}
+					}
+				}
+			}
+			p.select-languages{
+				font-size: 16px;
+				margin-top: 12px;
+				line-height: 26px;
+				padding: 0 47px 0 34px;
+			}
+			.profile-menu{
+				flex: none;
+				width: 100%;
+				min-height: auto;
+				margin-bottom: 50px;
+				ul{
+					position: relative;
+					width: 100%;
+					margin-top: 50px;
+					flex-direction: row;
+					flex-wrap: wrap;
+					li{
+						width: 49%;
+						padding-right: 15px;
+					}
+				}
+			}
+
+			.advantages{
+				&--item{
+					margin-bottom: 15px;
+					&:last-of-type{
+						margin-bottom: 0;
+					}
+					&:first-of-type {
+						margin-left: 15px;
+					}
+				}
+			}
+
+			.payment-plans{
+				justify-content: center;
+				&--item{
+					margin: 0 10px 50px;
+					&:last-of-type{
+						margin-bottom: 0;
+					}
+				}
+			}
+		}
+	}
+
+	@include breakpoint(xs){
+		.register-container{
+			padding: 46px 30px 30px;
+			.form-container{
+				form{
+					padding: 0;
+					fieldset{
+						.field{
+							input{
+								font-size: 15px;
+								padding-left: 20px;
+							}
+						}
+						button.btn--getStarted{
+							margin-top: 40px;
+						}
+					}
+				}
+			}
+
+			.profile-menu{
+				width: 100%;
+				min-height: auto;
+				margin-bottom: 20px;
+				ul{
+					margin-top: 50px;
+					li{
+						width: 100%;
+						padding-right: 15px;
+					}
+				}
+			}
+
+			p.select-languages{
+				position: relative;
+				font-size: 13px;
+				margin-top: 10px;
+				line-height: 20px;
+				padding: 0 0 0 20px;
+			}
+
+			.advantages{
+				&--item{
+					p.section-subtitle{
+						font-size: 15px;
+					}
+					&:first-of-type {
+						margin-left: 5px;
+					}
+				}
+			}
+
+			form fieldset .field.small{
+				max-width: 100%;
+				margin-left: 0;
+				margin-right: 0;
+			}
+		}
+	}
+}

@@ -1,0 +1,98 @@
+section.accelerate-app-section{
+	padding: 0 0 180px;
+	z-index: 3;
+	.section-subtitle{
+		margin: 33px 0 36px;		
+	}
+
+	svg.decorative-element{
+		position: absolute;
+		transform: rotate(45deg) translateX(-50%);
+		bottom: -360px;
+		left: 0;
+	}
+
+	.accelerate-row{
+		margin-top: 179px;
+		.section-title{
+			text-align: left;
+		}
+	}
+
+	.accelerate{
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		flex-wrap: wrap;
+		flex-direction: row;
+
+		&--item{
+			width: 44%;
+			margin-bottom: 105px;
+			&:nth-child(3), &:last-of-type{
+				margin-bottom: 0;
+			}
+			.section-subtitle{
+				margin: 48px 0 0;
+			}
+
+			.icon{
+				width: 90px;
+				height: 95px;
+				margin-bottom: 45px;
+				border: 4px solid #000;
+				background-color: #000;
+				border-radius: 2px;
+				@extend %justify-center;
+				transition: background-color 0.2s ease-in-out;
+				svg path{
+					transition: fill 0.2s ease-in-out;
+				}
+				&:hover{
+					background-color: #fff;
+					svg{
+						path[fill="#fff"]{
+							fill: #000;
+						}
+					}
+				}
+			}
+		}
+	}
+
+	@include breakpoint(tbmax){
+		.accelerate-row{
+			margin-top: 100px;
+			.section-title{
+				text-align: left;
+			}
+		}
+		.accelerate{
+			margin-top: 100px;
+		}
+	}
+
+	@include breakpoint(smmax){
+		svg.decorative-element{
+			opacity: 0.8;
+		}
+	}
+
+	@include breakpoint(xs){
+		.accelerate{
+			&--item{
+				width: 80%;
+				margin: 0 auto 60px;
+				&:nth-child(3){
+					margin-bottom: 60px;
+				}
+				.icon{
+					margin-bottom: 20px;
+				}
+				p.section-subtitle{
+					margin-top: 20px;
+				}
+			}
+		}
+	}
+}

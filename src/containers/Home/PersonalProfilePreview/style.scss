@@ -1,0 +1,38 @@
+&.personal-profile-preview{
+	padding: 30px 0 108px;
+
+	img.screen-shot{
+		position: relative;
+		display: block;
+		margin: 0 auto 106px;
+		z-index: 2;
+	}
+
+	svg{
+		display: block;
+		margin: auto;
+		position: relative;
+		z-index: 2;
+	}
+
+	img.orange-shape{
+		position: absolute;
+		bottom: 0;
+		width: 100%;
+		z-index: 1;
+		transform: translateY(49%);
+	}
+
+	@include breakpoint(tbmax){
+		padding-bottom: 100px;
+	}
+
+	@include breakpoint(smmax){
+		img.screen-shot{
+			max-width: 100%;
+		}
+		img.orange-shape{
+			transform: translateY(25%);
+		}
+	}
+}

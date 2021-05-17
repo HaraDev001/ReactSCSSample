@@ -1,0 +1,29 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="37" height="38" viewBox="0 0 37 38">
+  <defs>
+    <clipPath id="clip-path">
+      <ellipse id="Ellipse_368" data-name="Ellipse 368" cx="18.5" cy="19" rx="18.5" ry="19" transform="translate(0.175 -0.131)" fill="red"/>
+    </clipPath>
+  </defs>
+  <g id="british-flag" transform="translate(-0.175 0.131)" clip-path="url(#clip-path)">
+    <g id="united-kingdom_6_" data-name="united-kingdom (6)" transform="translate(-0.059 0)">
+      <ellipse id="Ellipse_369" data-name="Ellipse 369" cx="18.5" cy="19" rx="18.5" ry="19" transform="translate(0.234 -0.131)" fill="#f0f0f0"/>
+      <g id="Group_2274" data-name="Group 2274" transform="translate(0.65 0.723)">
+        <path id="Path_3498" data-name="Path 3498" d="M5.059,20.537A18.8,18.8,0,0,0,1.809,27.1h9.815Z" transform="translate(-1.809 -13.806)" fill="#0052b4"/>
+        <path id="Path_3499" data-name="Path 3499" d="M85.7,27.1a18.8,18.8,0,0,0-3.25-6.565L75.88,27.1Z" transform="translate(-49.261 -13.807)" fill="#0052b4"/>
+        <path id="Path_3500" data-name="Path 3500" d="M1.809,66.2a18.8,18.8,0,0,0,3.25,6.565L11.624,66.2Z" transform="translate(-1.809 -43.057)" fill="#0052b4"/>
+        <path id="Path_3501" data-name="Path 3501" d="M72.76,5.059A18.8,18.8,0,0,0,66.2,1.809v9.815Z" transform="translate(-43.056 -1.809)" fill="#0052b4"/>
+        <path id="Path_3502" data-name="Path 3502" d="M20.537,82.445A18.8,18.8,0,0,0,27.1,85.7V75.88Z" transform="translate(-13.806 -49.261)" fill="#0052b4"/>
+        <path id="Path_3503" data-name="Path 3503" d="M27.1,1.809a18.8,18.8,0,0,0-6.565,3.25L27.1,11.624Z" transform="translate(-13.806 -1.809)" fill="#0052b4"/>
+        <path id="Path_3504" data-name="Path 3504" d="M66.2,85.7a18.8,18.8,0,0,0,6.565-3.25L66.2,75.88Z" transform="translate(-43.057 -49.261)" fill="#0052b4"/>
+        <path id="Path_3505" data-name="Path 3505" d="M75.88,66.2l6.565,6.565A18.8,18.8,0,0,0,85.7,66.2Z" transform="translate(-49.261 -43.057)" fill="#0052b4"/>
+      </g>
+      <g id="Group_2275" data-name="Group 2275" transform="translate(0 0.073)">
+        <path id="Path_3506" data-name="Path 3506" d="M37.575,16.406H21.328V.16a19.04,19.04,0,0,0-4.922,0V16.406H.16a19.04,19.04,0,0,0,0,4.922H16.406V37.575a19.04,19.04,0,0,0,4.922,0V21.328H37.575a19.04,19.04,0,0,0,0-4.922Z" transform="translate(0 0)" fill="#d80027"/>
+        <path id="Path_3507" data-name="Path 3507" d="M66.2,66.2h0l8.419,8.419q.581-.581,1.109-1.211L68.516,66.2H66.2Z" transform="translate(-42.407 -42.407)" fill="#d80027"/>
+        <path id="Path_3508" data-name="Path 3508" d="M23.8,66.2h0l-8.419,8.419q.581.581,1.211,1.109L23.8,68.516Z" transform="translate(-9.851 -42.407)" fill="#d80027"/>
+        <path id="Path_3509" data-name="Path 3509" d="M21.819,23.8h0L13.4,15.377q-.581.581-1.109,1.211L19.5,23.8h2.32Z" transform="translate(-7.874 -9.851)" fill="#d80027"/>
+        <path id="Path_3510" data-name="Path 3510" d="M66.2,21.819h0L74.615,13.4q-.581-.581-1.211-1.109L66.2,19.5Z" transform="translate(-42.407 -7.874)" fill="#d80027"/>
+      </g>
+    </g>
+  </g>
+</svg>

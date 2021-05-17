@@ -1,0 +1,23 @@
+&.login-section{
+	padding: 50px 0;
+	min-height: calc(100vh - 128px);
+	@extend %justify-center;
+	.section-title{
+		margin-bottom: 83px;
+	}
+
+	@include breakpoint(xs){
+		.section-title{
+			margin-bottom: 50px;
+		}
+	}
+}
+
+.login_fieldset {
+	width: 395px;
+}
+
+.login_btn {
+	background-color: $bluesky;
+	border-color: $bluesky;
+}

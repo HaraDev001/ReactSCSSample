@@ -1,0 +1,40 @@
+&.the-process-section{
+	padding: 194px 0 273px;
+	z-index: 3;
+	.section-title{
+		margin: 50px 0 47px;
+		max-width: 370px;
+		text-align: left;
+	}
+
+	.advantages{
+		justify-content: flex-start;
+		margin-top: 50px;
+		&--item{
+			margin-right: 25px;
+			margin-bottom: 20px;
+			margin-left: 0;
+		}
+	}
+
+	img[alt="profile-preview"]{
+		//width: 707px;
+		height: 488px;
+	}
+
+	@include breakpoint(smmax){
+		padding: 100px 0 213px;
+		img[alt="profile-preview"]{
+			max-width: 100%;
+			height: auto;
+			margin-top: 40px;
+		}
+	}
+
+	@include breakpoint(xs){
+		padding: 100px 0 163px;
+		.advantages{
+			justify-content: center;
+		}
+	}
+}

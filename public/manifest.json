@@ -1,0 +1,15 @@
+{
+  "short_name": "Transleat",
+  "name": "Transleat",
+  "icons": [
+    {
+      "src": "favicons/icon-32x32.png",
+      "sizes": "32x32 128x128 152x152 167x167 180x180 192x192 196x196",
+      "type": "image/x-icon"
+    }
+  ],
+  "start_url": ".",
+  "display": "standalone",
+  "theme_color": "#000000",
+  "background_color": "#ffffff"
+}

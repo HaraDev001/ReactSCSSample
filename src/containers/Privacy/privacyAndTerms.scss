@@ -1,0 +1,48 @@
+&.privacy-page{
+	padding-top: 179px;
+	section{
+		p{
+			@include font(16px);
+			line-height: 33px;
+			margin-bottom: 46px;
+			&:last-of-type{
+				margin-bottom: 0;
+			}
+		}
+		.subject-title{
+			@include font(32px, 800);
+			line-height: 23px;
+			margin-bottom: 48px;
+		}
+		&.article-introduction-section{
+			padding: 56px 0 427px;
+			.subject-title{
+				text-align: center;
+			}
+			p{
+				text-align: center;
+				margin-left: auto;
+				margin-right: auto;
+				max-width: 600px;
+			}
+			img[alt="decoration"]{
+				position: absolute;
+				bottom: -100px;
+				left: 0;
+				right: 0;
+				margin: auto;
+				pointer-events: none;
+			}
+		}
+		&.main-content{
+			padding-bottom: 366px;
+			.article{
+				padding: 0 107px;
+				margin-bottom: 76px;
+				&:last-of-type{
+					margin-bottom: 0;
+				}
+			}
+		}
+	}
+}

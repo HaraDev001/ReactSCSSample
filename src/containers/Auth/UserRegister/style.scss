@@ -1,0 +1,100 @@
+&.user-register-section{
+	min-height: 100vh;
+	padding-bottom: 50px;
+	display: flex;
+	flex-direction: column;
+	background-color: white;
+	.register-header{
+		position: relative;
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		margin-top: 67px;
+		min-height: 61px;
+	}
+
+	form{
+		text-align: center;
+		max-width: 580px;
+		margin: 0 auto;
+		fieldset{
+			width: 100%;
+			background-color: #fff;
+			border-radius: 5px;
+			// box-shadow: 0 3px 26px rgba(#000000, 0.1);
+			padding: 53px 45px;
+			margin-bottom: 27px;
+			button.btn--getStarted{
+				max-width: 100%;
+			}
+			.agreement{
+				max-width: 440px;
+				margin: 40px auto 0;
+				@include font(18px);
+				color: #060F41;
+				line-height: 22px;
+				a{
+					display: inline-block;
+					color: $bluesky;
+				}
+			}
+		}
+	}
+
+	.section-subtitle{
+		margin: 28px auto 37px;
+		max-width: 570px;
+		text-align: center;
+	}
+
+	.section-title{
+		margin: 0 auto;
+	}
+
+	@include breakpoint(smmax){
+		.register-header{
+			margin-top: 50px;
+			min-height: auto;
+			.dots-delimiters{
+				display: none;
+			}
+		}
+	}
+
+	@include breakpoint(xs){
+		.register-header{
+			.already-have-account span{
+				display: none;
+			}
+		}
+
+		form{
+			fieldset{
+				padding: 40px 20px;
+			}
+		}
+	}
+
+	@include breakpoint(xs){
+
+		.section-subtitle, .section-title{
+			padding: 0 15px;
+		}
+	}
+}
+
+.register_logo {
+	position: absolute;
+	left: 10px;
+	top: 0px;
+	visibility: hidden;
+}
+
+.register_already {
+	position: absolute;
+	right: 0px;
+}
+
+.policy_font_color {
+	color: yellow;
+}

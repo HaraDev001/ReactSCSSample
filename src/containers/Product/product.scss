@@ -1,0 +1,7 @@
+&.product-page{
+	padding-top: 179px;
+	section{
+		@import "AppInterface/style";
+		@import "TheProcess/style";
+	}
+}

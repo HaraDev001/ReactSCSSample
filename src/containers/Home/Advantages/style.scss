@@ -1,0 +1,65 @@
+&.advantages-section{
+	padding: 193px 0;
+	overflow: hidden;
+	.section-title{
+		position: relative;
+		text-align: left;
+		cursor: pointer;
+	}
+	.section-subtitle {
+		position: relative;
+		padding-top: 44px;
+	}
+	.advantage-item{
+		position: relative;
+		margin-bottom: 59px;
+		&._1{
+			svg{
+				bottom: -24px;
+				left: -25px;
+			}
+		}
+		&._2{
+			svg{
+				bottom: -30px;
+				left: -25px;
+			}
+		}
+		&._3{
+			svg{
+				bottom: -53px;
+				left: 0;
+			}
+		}
+	}
+
+	svg{
+		position: absolute;
+		left: 0;
+	}
+
+	img{
+		display: block;
+		margin-left: 70px;
+		height: 629px;
+	}
+	@include breakpoint(tbmax){
+		img{
+			margin-top: 30px;
+			margin-left: auto;
+			margin-right: auto;
+			max-height: 529px;
+			height: auto;
+		}
+	}
+
+	@include breakpoint(smmax){
+		img{
+			max-width: 100%;
+		}
+	}
+
+	@include breakpoint(xs){
+		padding: 120px 0 120px;
+	}
+}

@@ -1,0 +1,7 @@
+&.home-page {
+	padding-top: 179px;
+	section{
+		@import "PersonalProfilePreview/style";
+		@import "Advantages/style";
+	}
+}

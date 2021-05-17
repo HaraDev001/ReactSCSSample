@@ -1,0 +1,21 @@
+section.product-hunt-section{
+	text-align: center;
+	padding: 56px 0 0;
+	z-index: 2;
+
+	.section-title{
+		margin: 43px auto 46px;
+	}
+	.section-subtitle{
+		margin: auto;
+		max-width: 570px;
+	}
+
+	.btn--getStarted{
+		margin: 46px auto 29px;
+	}
+
+	@include breakpoint(smmax){
+		padding-top: 0;
+	}
+}

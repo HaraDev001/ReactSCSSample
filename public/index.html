@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8"/>
+	<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no"/>
+	<meta name="theme-color" content="#000000"/>
+<!--	<meta name="description" content=""/>-->
+<!--	<meta name="keywords" content="">-->
+<!--	<meta name="author" content="">-->
+	
+	<meta property="og:type" content="website" data-react-helmet="true"/>
+	<!--	<meta property="og:title" content="" data-react-helmet="true"/>-->
+	<!--	<meta property="og:url" content="" data-react-helmet="true"/>-->
+	<!--	<meta property="og:description" content="" data-react-helmet="true"/>-->
+	<!--	<meta property="og:image" content="" data-react-helmet="true"/>-->
+	
+	<link rel="icon" href="%PUBLIC_URL%/favicons/icon-32x32.png"/>
+	<link rel="apple-touch-icon" href="%PUBLIC_URL%/favicons/icon-32x32.png"/>
+	
+	<link rel="icon" type="image/png" sizes="196x196" href="%PUBLIC_URL%/favicons/icon-196x196.png">
+	<link rel="icon" type="image/png" sizes="192x192" href="%PUBLIC_URL%/favicons/icon-192x192.png">
+	<link rel="icon" type="image/png" sizes="180x180" href="%PUBLIC_URL%/favicons/icon-180x180.png">
+	<link rel="icon" type="image/png" sizes="167x167" href="%PUBLIC_URL%/favicons/icon-167x167.png">
+	<link rel="icon" type="image/png" sizes="152x152" href="%PUBLIC_URL%/favicon/icon-152x152.png">
+	<link rel="icon" type="image/png" sizes="128x128" href="%PUBLIC_URL%/favicons/icon-128x128.png">
+	<link rel="icon" type="image/png" sizes="32x32" href="%PUBLIC_URL%/favicons/icon-32x32.png">
+	
+	<link rel="manifest" href="%PUBLIC_URL%/manifest.json"/>
+<!--	<link rel="stylesheet" type="text/css" charset="UTF-8" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.6.0/slick.min.css"/>-->
+<!--	<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.6.0/slick-theme.min.css"/>-->
+	<title>Transleat</title>
+</head>
+<body>
+<div class="loading"></div>
+
+<noscript>You need to enable JavaScript to run this app.</noscript>
+<div id="root"></div>
+<div id="modal-root" class="modal-root"></div>
+
+<!--    smooth first load   -->
+<script>
+	document.addEventListener('DOMContentLoaded', function (e) {
+		setTimeout(function() {
+			document.body.classList.add('loaded');
+		}, 1900);
+	});
+</script>
+
+</body>
+</html>
