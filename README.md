@@ -1,9 +1,3 @@
 # ReactJS with SCSS 
 
-npm install
-
-npm start
-
-# Project URL
-
-https://transl-eat.web.app
+This is the sample app that made using ReactJS-SCSS.
